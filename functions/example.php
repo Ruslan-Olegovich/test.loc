@@ -21,7 +21,7 @@ function showTitle($a)
 }
 function show($a)
 {
-    
+
     echo "<p>$a</p>";
     echo PHP_EOL;
 }
