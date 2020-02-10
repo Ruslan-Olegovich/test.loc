@@ -7,14 +7,14 @@
  */
 class WClass
 {
-    var $hello;
+
     // зачем это свойство?
 
     function Getname() {
-      echo $this->hello;
+      echo $this->string;
     }
     // зачем отображение свойства которое ты сам сделал?
-      var $w;
+
     //зачем это свойство?
 
     private $string;
