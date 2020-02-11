@@ -8,7 +8,6 @@
 class WClass
 {
 
-
     function getName() {
         // 1. какая область видимости у этого метода? где комментарий того, что
         // делает эта функция?
@@ -18,7 +17,7 @@ class WClass
         // 2. имена методов и свойств должны начинаться с маленьиз букв
         // но каждое последуюущее слово должно начинаться с больгой буквы
 
-        echo$this->string;
+        echo $this->string;
         // почему отступ сделан одним пробелом?
         // должно быть 4
         //сделал
@@ -56,10 +55,9 @@ class WClass
         return $this->author;
     }
 
+    public function strLen(){
 
-    public function numberSimvol(){
-     $author = mb_strlen();
-     return $colch;
+        return mb_strlen($this->string);
     }
 
 
