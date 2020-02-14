@@ -7,12 +7,18 @@
  */
 class ArrayClass
 {
-    private $array = [];
-
-
     //вывод переданного массива
+
     function showArray(){
         var_dump($this->array);
+    }
+
+    private $array = [];
+
+    
+    public function __construct($array)
+    {
+        $this->array = $array;
     }
 
     public function generateArray()
