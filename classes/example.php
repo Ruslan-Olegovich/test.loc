@@ -5,63 +5,39 @@
  * инициализации
  *
  */
-class WClass
+class ArrayClass
 {
+    private $array = [];
 
-    function getName() {
-        // 1. какая область видимости у этого метода? где комментарий того, что
-        // делает эта функция?
 
-        //по умолчанию public. Эта функция выводит строку $string.
-
-        // 2. имена методов и свойств должны начинаться с маленьиз букв
-        // но каждое последуюущее слово должно начинаться с больгой буквы
-
-        echo $this->string;
-        // почему отступ сделан одним пробелом?
-        // должно быть 4
-        //сделал
+    //вывод переданного массива
+    function showArray(){
+        var_dump($this->array);
     }
 
-    private $string;
-
-    /**
-     * Имя автора
-     * @var [type]
-     */
-    protected $author = 'Artem w1575';
-
-    /**
-     * Содержит в себе вресию текущего класса
-     * @var [type]
-     */
-    public $classVersion = 1;
-
-    /**
-     * Конструктор
-     * @param [type] $string [description]
-     */
-    public function __construct($string)
+    public function generateArray()
     {
-        $this->string = $string;
+        $c1 = [];
+        for($i = 0; $i < 4; $i++)
+        {
+            $c1[]=rand(-255,255);
+        }
+        return $c1;
+        print_r($c1);
     }
 
-    /**
-     * Возвращает имя автора
-     * @return [type] [description]
-     */
-    public function getAuthorName()
+    function negativeNumberSearch()
     {
-        return $this->author;
+      $array1[] = $this->array;
+        $newArray = [];
+          foreach($array1 as $arr)
+          {
+              if($arr < 0)
+              {
+                  $newArray[] = $arr;
+              }
+          }
+          var_dump($newArray);
     }
-
-    public function strLen(){
-
-        return mb_strlen($this->string);
-    }
-
-
-
-
 
 }
