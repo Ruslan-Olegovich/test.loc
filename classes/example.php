@@ -10,40 +10,40 @@ class ArrayClass
     //вывод переданного массива
 
     function showArray(){
-        var_dump($this->array);
+      echo '<pre>';
+      var_dump($this->array);
+      echo '</pre>' . PHP_EOL;
     }
 
     private $array = [];
 
-    
+// Конструктор
     public function __construct($array)
     {
         $this->array = $array;
     }
 
-    public function generateArray()
-    {
-        $c1 = [];
-        for($i = 0; $i < 4; $i++)
-        {
-            $c1[]=rand(-255,255);
-        }
-        return $c1;
-        print_r($c1);
-    }
-
+  // подсчет кол-ва отрицательных элментов
+  // и вывод на экран только отриц. элементов.
     function negativeNumberSearch()
     {
-      $array1[] = $this->array;
+      $array = $this->array;
         $newArray = [];
-          foreach($array1 as $arr)
+          for($i=0; $i < count($array); $i++)
           {
-              if($arr < 0)
+              if($array[$i] < 0)
               {
-                  $newArray[] = $arr;
+                  $newArray[] = $array[$i];
               }
           }
-          var_dump($newArray);
+          echo "<pre>";
+          print_r($newArray);
+          echo "</pre>";
+          $count = count($newArray);
+          echo "Количество = $count ";
+
     }
+
+    //Поиск наименьшего и наибольшего значения
 
 }

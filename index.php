@@ -17,10 +17,8 @@ require __DIR__ . "/classes/example.php";
 require __DIR__ . "/functions/example.php";
 
 
-$c = new ArrayClass([0, 234, 23, -34, 4345]);
+echo "<h1>Вывод Массива</h1>  ";
+$c = new ArrayClass([0, 234, -23, -34, 4345]);
 $c->showArray();
-
-
-  if($c1 = new ArrayClass(4)){
-    $c1->generateArray();
-  }
+echo "<h1>Подсчет кол-ва отрицательных элментов</h1>";
+$c->negativeNumberSearch();
